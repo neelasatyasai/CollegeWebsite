@@ -1,0 +1,24 @@
+.background-slideshow {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  .slideshow {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  

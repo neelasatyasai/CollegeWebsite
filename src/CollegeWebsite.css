@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+  }
+  @keyframes slideshow {
+    0%, 100% {
+      background-image: url("/image1.jpg.jpg");
+    }
+    33% {
+      background-image: url("/image2.jpg.png");
+    }
+    66% {
+      background-image: url("/image3.jpg.jpg");
+    }
+  }
+  .nav-link {
+    color: #0056b3; /* Dark blue text */
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #0d6efd; /* Bootstrap primary blue on hover */
+    text-decoration: none;
+  }
+  
+  /* Underline animation on hover */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #0d6efd;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
